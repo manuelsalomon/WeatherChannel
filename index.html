@@ -22,20 +22,28 @@
 
 <body>
     <div class="container">
-        <div  id="contenido" class="row thumbnail">
-            <h1>CLIMA</h1>
+        <div id="contenido" class="row thumbnail">
+            <h1 class="bg-success text-center">CLIMA</h1>
             <div id="botones">
             </div>
-            <input type="text" id="input" name="" value="">
-            <br><br>
+            <div class="input-group">
+                <input type="text" id="input" class="form-control" placeholder="Ingrese ciudad/Pais/Region">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" id="clearbtn" type="button">
+                  <i class="fa fa-times-circle-o " aria-hidden="true"></i>
+                </button>
+                </div>
+            </div>
+            <br>
+            <h3 class="bg-info" id="location"></h2>
             <ul class="list-group">
-                <li class="list-group-item">Temperatura Actual:<span id="temp"></span></li>
-                <li class="list-group-item">Temp Max:<span id="max"></span></li>
-                <li class="list-group-item">Temp Min:<span id="min"></span></li>
-                <li class="list-group-item">Descripcion:<span id="desc"></span></li>
-                <li class="list-group-item">Viento:<span id="viento"></span></li>
-                <li class="list-group-item">Amanece:<span id="amane"></span></li>
-                <li class="list-group-item">Ocaso:<span id="puesta"></span></li>
+                <li class="list-group-item">Temperatura Actual: <span id="temp"></span></li>
+                <li class="list-group-item">Temp Max: <span id="max"></span></li>
+                <li class="list-group-item">Temp Min: <span id="min"></span></li>
+                <li class="list-group-item">Descripcion: <span id="desc"></span></li>
+                <li class="list-group-item">Viento: <span id="viento"></span></li>
+                <li class="list-group-item">Amanece: <span id="amane"></span></li>
+                <li class="list-group-item">Ocaso: <span id="puesta"></span></li>
             </ul>
         </div>
     </div>

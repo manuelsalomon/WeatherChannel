@@ -1,3 +1,4 @@
+/*traer datos de la API*/
 var ciudades=[]
 $('#input').keypress(function(e){
 if(e.keyCode===13){
@@ -17,21 +18,22 @@ if(e.keyCode===13){
       thisInput.val("")
     }
   })
-}
-
+ }
+/*Generar botones de los resultados*/
 })
 function crear_botones(){
   $("#botones").empty()
   for(var i = 0; i < ciudades.length; i++ ){
   $('#botones').append("<button class='btn btn-default'>"+ciudades[i]+"</button>")
 }}
-
+/*Insertar datos de la API en tabla*/
   $('#botones').on('click', "button", function() {
 
       $.ajax({
           method: 'GET',
           url: 'http://api.openweathermap.org/data/2.5/weather?q='+encodeURI($(this).text())+'&appid=95176c8edea30e33338e0eaddd53a916&units=metric',
           success: function(data) {
+          $('#location').text(data.name)
           $('#temp').text(data.main.temp+"°C")
           $('#max').text(data.main.temp_max+"°C")
           $('#min').text(data.main.temp_min+"°C")
@@ -43,3 +45,8 @@ function crear_botones(){
       })
 
   });
+/*borrar todos los botones generados*/
+$('#clearbtn').on('click', function() {
+  $("#botones").empty()
+  ciudades = []
+});
