@@ -1,3 +1,3 @@
 # WeatherChannel
 Aplicación diseñada para buscar ubicación y dar su tiempo actual como resultado. </br>
-Version 1.0 Online https://astrologer-bear-64835.bitballoon.com
+Version 1.0 Online http://florist-alban-56878.bitballoon.com/
